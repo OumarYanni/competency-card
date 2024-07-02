@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oumar Yanni - Card</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/photo-de-oumar.jpg"
+    />
+
+    <style>
+      .card {
+        position: relative;
+        width: 550px;
+        height: 650px;
+        margin: 1.25rem;
+        overflow: hidden;
+      }
+      .card-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: opacity 0.5s;
+      }
+      .card-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .card:hover .card-content {
+        opacity: 1;
+      }
+      .card:hover .card-image {
+        opacity: 0.3;
+      }
+      .language-indicator {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-r from-black to-gray-800 text-white flex items-center justify-center min-h-screen font-spaceGrotesk"
+  >
+    <button
+      id="toggle-language"
+      class="absolute top-4 right-4 bg-green-400 text-white py-1 px-3 rounded m-2.5"
+    >
+      EN/FR
+    </button>
+
+    <div id="card-fr" class="card">
+      <div
+        class="card-image"
+        style="background-image: url('src/images/photo-de-oumar.jpg')"
+      ></div>
+      <div class="card-content p-10">
+        <!-- <div class="language-indicator">FR</div> -->
+        <div class="grid grid-flow-row-dense grid-cols-2 grid-rows-2 w-full">
+          <h2 class="text-2xl font-bold justify-self-start">OUMAR YANNI</h2>
+          <p class="justify-self-end">27 ans</p>
+          <p class="text-lg justify-self-start">alias Om's</p>
+          <div class="flex space-x-2 mt-2 justify-self-end">
+            <a href="https://www.linkedin.com/in/oumar-yanni" class="text-white"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/OumarYanni" class="text-white"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://oumar-yanni.notion.site/Hello-This-is-Oumar-EN-8bbd3fb50af1400aa0bab80f8b2069fa"
+              class="text-white"
+              ><span class="material-symbols-outlined"> work_history </span></a
+            >
+          </div>
+        </div>
+        <h3
+          class="text-xl font-bold mt-4 p-2.5 m-4 rounded w-full text-center text-black bg-white"
+        >
+          Ingénieur Financier & Développeur Full Stack
+        </h3>
+        <div class="grid gap-4 grid-cols-2">
+          <p>💪<br />Point fort 1<br /><strong>Polyvalence</strong></p>
+          <p>
+            🧙🚀<br />Superpouvoir secret<br /><strong
+              >Créativité et Innovation</strong
+            >
+          </p>
+          <p>💪🧠<br />Point fort 2<br /><strong>Pensée Stratégique</strong></p>
+
+          <p>
+            🤭😌<br />Plaisir coupable<br /><strong
+              >Challenger mon modèle mental</strong
+            >
+          </p>
+          <p>
+            😬<br />Faiblesse<br /><strong>Parfois trop perfectionniste</strong>
+          </p>
+          <p>
+            🔥<br />A une obsession pour<br /><strong
+              >L'éthique, la tech et la gestion de patrimoine</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="card-en" class="card hidden">
+      <div
+        class="card-image"
+        style="background-image: url('src/images/photo-de-oumar.jpg')"
+      ></div>
+      <div class="card-content p-10">
+        <!-- <div class="language-indicator">EN</div> -->
+        <div class="grid grid-flow-row-dense grid-cols-2 grid-rows-2 w-full">
+          <h2 class="text-2xl font-bold justify-self-start">OUMAR YANNI</h2>
+          <p class="justify-self-end">27 years old</p>
+          <p class="text-lg justify-self-start">aka Om's</p>
+          <div class="flex space-x-2 mt-2 justify-self-end">
+            <a href="https://www.linkedin.com/in/oumar-yanni" class="text-white"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/OumarYanni" class="text-white"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://oumar-yanni.notion.site/Hello-This-is-Oumar-EN-8bbd3fb50af1400aa0bab80f8b2069fa"
+              class="text-white"
+              ><span class="material-symbols-outlined"> work_history </span></a
+            >
+          </div>
+        </div>
+        <h3
+          class="text-xl font-bold mt-4 p-2.5 m-4 rounded w-full text-center text-black bg-white"
+        >
+          Title: Financial Engineer & Full Stack Developer
+        </h3>
+        <div class="grid gap-4 grid-cols-2">
+          <p>💪<br />Strength 1<br /><strong>Versatility</strong></p>
+          <p>
+            🧙🚀<br />Secret Superpower<br /><strong
+              >Creativity and Innovation</strong
+            >
+          </p>
+          <p>💪🧠<br />Strength 2<br /><strong>Strategic Thinking</strong></p>
+          <p>
+            🤭😌<br />Guilty Pleasure<br /><strong
+              >Challenge my mental model</strong
+            >
+          </p>
+          <p>
+            😬<br />Weakness<br /><strong>Sometimes too perfectionist</strong>
+          </p>
+          <p>
+            🔥<br />Obsessed with<br /><strong
+              >Ethics, tech and wealth management</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/js/scripts.js"></script>
+  </body>
+</html>
